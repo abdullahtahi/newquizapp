@@ -1,0 +1,16 @@
+.questionbody{
+background-image: url("../../Component/images/ques_Appear.svg");
+background-repeat: no-repeat;
+height: 100vh;
+background-size: cover;
+}
+.questionAppear{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 30px;
+    /* display: flex; */
+    text-align: center;
+    transform: translateY(15rem);
+    background-color: white;
+    width: 642px;
+}

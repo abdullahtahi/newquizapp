@@ -1,0 +1,29 @@
+.username_input{
+    width:30rem;
+}
+.quizcatagory_input{
+    width:30rem;
+}
+.quizdiffculty_input{
+    width:30rem;
+    
+    
+}
+.username{
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+.quizdiffculty{
+    margin-bottom: 10px;    
+}
+.quizcatagory{
+    margin-bottom: 10px;
+}
+.errors{
+    font-size: 40px;
+    background: yellowgreen;
+    text-align: center;
+
+
+
+}

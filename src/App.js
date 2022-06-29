@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import "./App.css"
+import Quiz from './Pages/Quiz/Quiz'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './Pages/Home/Home'
+import Result from './Pages/Result/Result'
+import Header from './Component/Header/Header'
 
-function App() {
+export default function App() {
+  const [catagory, setcatagory] = useState()
+  const [name, setname] = useState()
+  const [difficulty, setdifficulty] = useState()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className='container'>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home
+          setcatagory={setcatagory}
+            catagory={catagory}
+            setname={setname}
+            name={name}
+            setdifficulty={setdifficulty}
+            difficult={difficulty}
+          />} />
+          <Route path="/quizpage" element={<Quiz
+            catagory={catagory}
+            name={name}
+            difficult={difficulty}
+          />} />
+          <Route path="/result" element={<Result/>}/>
 
-export default App;
+        </Routes>
+      </Router>
+    </div>
+  )
+}
